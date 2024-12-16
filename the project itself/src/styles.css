@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+
+body {
+  width: 100%;
+  background-image: url(../public/background.jpg);
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
