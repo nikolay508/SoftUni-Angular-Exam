@@ -15,5 +15,5 @@ import { FooterComponent } from './core/footer/footer.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'project';
+  title = 'project-angular';
 }

@@ -36,3 +36,4 @@ The SPA will be available at http://localhost:4200
 
 Ensure the REST API server is running before starting the SPA to enable proper integration.# SoftUni-Angular-Exam
 # SoftUni-Angular-Exam
+# SoftUni-Angular-Exam

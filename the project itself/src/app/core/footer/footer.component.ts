@@ -8,5 +8,5 @@ import { Component } from "@angular/core";
 })
 
 export class FooterComponent {
-    creator = 'Bozhidar Ivanov'
+    creator = 'Nikolay Todorov'
 }
