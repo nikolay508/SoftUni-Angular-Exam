@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavigationBarComponent } from './core/navigation-bar/navigation-bar.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
