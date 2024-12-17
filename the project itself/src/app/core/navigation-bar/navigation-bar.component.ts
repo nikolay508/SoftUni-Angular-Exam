@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { UserService } from '../../user/user.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -9,9 +10,15 @@ import { Router, RouterLink } from '@angular/router';
   standalone: true,
 })
 export class NavigationBarComponent {
-  constructor(private router: Router) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   get isLoggedIn(): boolean {
-    return true;
+    return this.userService.isLogged;
+  }
+
+  logout() {
+    this.userService.logout().subscribe(() => {
+      this.router.navigate(['/login']);
+    });
   }
 }

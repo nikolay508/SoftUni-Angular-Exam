@@ -2,17 +2,21 @@
 
 footer {
     width: 100%;
-    background-color: black;
-    color: white;
-    height: 30px;
-    margin: 0;
+    background-color: white;
+    color: navy;
+    width: 100%;
+    height: 50px;
     padding: 10px;
-    font-family: "Madimi One", sans-serif;
     font-weight: 500;
     font-size: large;
     font-style: normal;
     text-align: center;
+    position: fixed;
     bottom: 0;
-    position: fixed; /* Changed from absolute to fixed */
     left: 0;
+}
+
+p{
+    position: relative;
+    bottom: 6px;
 }

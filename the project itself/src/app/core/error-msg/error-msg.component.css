@@ -1,0 +1,19 @@
+.notification {
+  position: fixed;
+  z-index: 10;
+  right: 8%;
+  top: 12%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: rgb(255, 255, 255);
+  background-color: red;
+}
+
+.error-message {
+  background-color: red;
+  opacity: 80%;
+}
+
+.success-message {
+  background-color: rgb(36, 160, 36);
+}
