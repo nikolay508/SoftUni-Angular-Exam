@@ -1,0 +1,22 @@
+<h1 class="courses-title">📚 All Our Courses:</h1>
+<div class="course-container">
+    @if (courses.length === 0) {
+        <div class="no-courses-message">
+            <h2>No Courses Available</h2>
+            <p>We currently have no courses to display. Please check back later for updates!</p>
+        </div>
+    } @else {
+        @for (course of courses; track $index) {
+            <div class="course-card">
+                <img src="{{course.imageUrl}}" alt="{{course.title}}" class="course-img">
+                <div class="course-details">
+                    <h3 class="course-title">{{course.title}}</h3>
+                    <p class="course-description">
+                        {{course.description}}
+                    </p>
+                    <div class="btn details-btn" routerLink="/courses/{{course._id}}">Details</div>
+                </div>
+            </div>
+        }
+    }
+</div>

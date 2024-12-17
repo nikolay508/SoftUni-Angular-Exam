@@ -1,0 +1,14 @@
+<body>
+    <div class="main-title">
+        <h1>Welcome to <br>Second English High School<br> Activities Network</h1>
+    </div>
+
+    <div class="btns-container">
+        @if (isLoggedIn) {
+            <button class="first-btn" routerLink="/profile">My Profile</button>
+        }@else {
+            <button class="first-btn" routerLink="/login">Login</button>
+        }
+        <button class="second-btn" routerLink="/courses">Activities</button>
+    </div>
+</body>
