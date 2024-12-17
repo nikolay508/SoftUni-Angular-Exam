@@ -3,49 +3,49 @@
 
 body {
     text-decoration: none;
-    font-family: "Madimi One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-shadow: 2px 2px #000000;
-    background-color: #000000;
     margin: 0;
     padding: 0;
-    color: #333;
-    margin: 0 auto;
   }
   
   .about-container {
     text-decoration: none;
-    font-family: "Madimi One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-shadow: 2px 2px #000000;
     width: 100%;
-    max-width: 800px;
-    margin: 200px auto;
+    max-width: 1200px;
+    height: 570px;
+    margin: 150px auto;
     padding: 20px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   }
   
   .about-container h1 {
     font-size: 2.5rem;
-    color: rgb(0, 255, 255);
+    color: navy;
     margin-bottom: 20px;
+    text-shadow: 3px 2px goldenrod;
   }
   
   .about-container p {
+    color: navy;
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
   }
   
   .about-container h2 {
     font-size: 2rem;
-    color: rgb(0, 255, 255);
+    color: navy;
     margin-bottom: 10px;
+    margin-top: 40px;
+    text-shadow: 3px 2px goldenrod;
   }
   
   .about-container ul {
@@ -54,12 +54,13 @@ body {
   }
   
   .about-container ul li {
+    color: navy;
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
   
   .about-container ul li a {
-    color: rgb(0, 255, 255);
+    color: goldenrod;
     text-decoration: none;
   }
   
