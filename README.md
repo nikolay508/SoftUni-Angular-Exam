@@ -27,7 +27,7 @@ If everything is normal you will see the following messages:
 
     Open Terminal, navigate and install:
    
-        - cd the project itself
+        - cd "the project itself"
         - npm i (install)
 
 3. Start the Application:
