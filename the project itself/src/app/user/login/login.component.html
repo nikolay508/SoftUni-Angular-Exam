@@ -1,51 +1,86 @@
 <div class="auth-container">
-    <div class="form-box">
-      <h2>Login</h2>
-      @if (hasError) {
-        <!-- todo -->
+  <div class="form-box">
+    <h2>Login</h2>
+    @if (hasError) {
+    <app-error-msg />
+    }
+
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <div
+        class="input-group"
+        [class.invalid]="
+          form.get('email')?.invalid && form.get('email')?.touched
+        "
+        [class.valid]="form.get('email')?.valid && form.get('email')?.touched"
+      >
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          formControlName="email"
+        />
+      </div>
+
+      @if(form.get('email')?.touched) {
+      <div>
+        @if(form.get('email')?.errors?.['required']) {
+        <div class="error">Email is required!</div>
+        } @if(form.get('email')?.errors?.['emailValidator']) {
+        <div class="error">Email is not valid!</div>
+        }
+      </div>
       }
 
-      <form [formGroup]="form" (ngSubmit)="login()">
-        <div class="input-group" [class.invalid]="form.get('email')?.invalid && form.get('email')?.touched" [class.valid]="form.get('email')?.valid && form.get('email')?.touched">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" formControlName="email">
+      <div formGroupName="passGroup">
+        <div
+          class="input-group"
+          [class.invalid]="
+            form.get('passGroup')?.get('password')?.invalid &&
+            form.get('passGroup')?.get('password')?.touched
+          "
+          [class.valid]="
+            form.get('passGroup')?.get('password')?.valid &&
+            form.get('passGroup')?.get('password')?.touched
+          "
+        >
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            formControlName="password"
+          />
         </div>
 
-        @if(form.get('email')?.touched) {
-          <div>
-            @if(form.get('email')?.errors?.['required']) {
-              <div class="error">Email is required!</div>
-            }
-            @if(form.get('email')?.errors?.['emailValidator']) {
-              <div class="error">Email is not valid!</div>
-            }
-          </div>
-        }
-  
-        <div formGroupName="passGroup">
-          <div class="input-group" [class.invalid]="form.get('passGroup')?.get('password')?.invalid && form.get('passGroup')?.get('password')?.touched" [class.valid]="form.get('passGroup')?.get('password')?.valid && form.get('passGroup')?.get('password')?.touched">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" formControlName="password">
-          </div>
-  
-          @if(form.get('passGroup')?.get('password')?.touched) {
-            <div>
-              @if(form.get('passGroup')?.get('password')?.errors?.['required']) {
-                <div class="error">Password is required!</div>
-              }
-              @if(form.get('passGroup')?.get('password')?.errors?.['minlength']) {
-                <div class="error">Password must be at least 4 characters long!</div>
-              }
-            </div>
+        @if(form.get('passGroup')?.get('password')?.touched) {
+        <div>
+          @if(form.get('passGroup')?.get('password')?.errors?.['required']) {
+          <div class="error">Password is required!</div>
+          } @if(form.get('passGroup')?.get('password')?.errors?.['minlength']) {
+          <div class="error">Password must be at least 4 characters long!</div>
           }
-
         </div>
+        }
+      </div>
 
-        <button type="submit" class="submit-btn" [disabled]="form.invalid" [style]="{backgroundColor: form.invalid ? '#007d7d' : '#00ffff'}" (click)="login()">Login</button>
-        
-        <div class="register-link">
-          <p>Don't have an account? <a routerLink="/register">Register here</a></p>
-        </div>
-      </form>
-    </div>
+      <button
+        type="submit"
+        class="submit-btn"
+        [disabled]="form.invalid"
+        [style]="{ backgroundColor: form.invalid ? 'grey' : 'goldenrod' }"
+        (click)="login()"
+      >
+        Login
+      </button>
+
+      <div class="register-link">
+        <p>
+          Don't have an account? <a routerLink="/register">Register here</a>
+        </p>
+      </div>
+    </form>
   </div>
+</div>

@@ -1,14 +1,13 @@
 <div class="profile-container">
-    <h1 class="profile-title">👤 {{user?.username}}'s Profile Information:</h1>
-  
-    <div class="profile-card">
-      <ng-container>
-        <div class="profile-info">
-          <p class="info-item"><strong>Username:</strong> {{user?.username}}</p>
-          <p class="info-item"><strong>Email:</strong> {{user?.email}}</p>
-          <p class="info-item"><strong>ID:</strong> {{user?._id}}</p>
-        </div>
-      </ng-container>
-    </div>
+  <h1 class="profile-title">{{ user?.username }}'s Account:</h1>
+
+  <div class="profile-card">
+    <ng-container>
+      <div class="profile-info">
+        <p class="info-item"><strong>Username:</strong> {{ user?.username }}</p>
+        <p class="info-item"><strong>Email:</strong> {{ user?.email }}</p>
+        <p class="info-item"><strong>ID:</strong> {{ user?._id }}</p>
+      </div>
+    </ng-container>
   </div>
-  
+</div>

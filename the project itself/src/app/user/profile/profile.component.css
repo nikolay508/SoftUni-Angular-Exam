@@ -1,40 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
-
 body {
-  font-family: "Madimi One", sans-serif;
+  text-decoration: none;
   font-weight: 400;
-  background-color: #f4f4f9;
+  font-style: normal;
   margin: 0;
   padding: 0;
-  text-shadow: 2px 2px #000000;
 }
 
 .profile-container {
-  max-width: 600px;
-  font-family: "Madimi One", sans-serif;
+  text-decoration: none;
   font-weight: 400;
+  font-style: normal;
+  width: 100%;
+  max-width: 800px;
   margin: 300px auto;
   padding: 20px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
+  background-color: white;
+  border-radius: 10px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-title {
   font-size: 2.5rem;
-  color: #ffffff;
+  color: rgb(18, 18, 157);
   margin-bottom: 30px;
-  text-shadow: 2px 2px #000000;
 }
 
 .profile-card {
-  background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
   width: 300px;
   margin: 0 auto;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   margin-bottom: 40px;
 }
 
@@ -55,7 +52,6 @@ input {
   font-size: 14px;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Madimi One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -63,7 +59,7 @@ input {
 .info-item {
   margin: 10px 0;
   font-size: 1rem;
-  color: #333;
+  color: goldenrod;
 }
 
 .courses-header {
@@ -80,7 +76,7 @@ input {
 }
 
 .course-card {
-  background-color: #fff;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   margin: 15px;
