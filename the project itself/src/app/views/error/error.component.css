@@ -1,0 +1,55 @@
+.mainbox {
+  margin: auto;
+  height: 550px;
+  width: 800px;
+  position: relative;
+  top: 175px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.err {
+  color: rgb(18, 18, 157);
+  text-shadow: 3px 2px goldenrod;
+  font-size: 11rem;
+  position: absolute;
+  left: 20%;
+  top: 13%;
+}
+
+.far {
+  position: absolute;
+  font-size: 10.5rem;
+  left: 45%;
+  top: 14%;
+  color: rgb(18, 18, 157);
+  text-shadow: 3px 2px goldenrod;
+}
+
+.err2 {
+  color: rgb(18, 18, 157);
+  text-shadow: 3px 2px goldenrod;
+  font-size: 11rem;
+  position: absolute;
+  left: 68%;
+  top: 13%;
+}
+
+.msg {
+  text-align: center;
+  font-size: 1.6rem;
+  position: absolute;
+  left: 16%;
+  top: 65%;
+  width: 75%;
+  color: goldenrod;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(18, 18, 157);
+}
+
+a:hover {
+  text-decoration: underline;
+}

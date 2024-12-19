@@ -1,0 +1,22 @@
+<h1 class="courses-title">All the upcoming activities:</h1>
+<div class="course-container">
+  @if (activities.length === 0) {
+  <div class="no-courses-message">
+    <h2>No upcoming activities yet</h2>
+    <p>We currently have no activities to display. Check again later.</p>
+  </div>
+  } @else { @for (each of activities; track $index) {
+  <div class="course-card">
+    <img src="{{ each.imageUrl }}" alt="{{ each.title }}" class="course-img" />
+    <div class="course-details">
+      <h3 class="course-title">{{ each.title }}</h3>
+      <p class="course-description">
+        {{ each.description }}
+      </p>
+      <div class="btn details-btn" routerLink="/courses/{{ each._id }}">
+        More info
+      </div>
+    </div>
+  </div>
+  } }
+</div>

@@ -1,0 +1,127 @@
+<div class="auth-container">
+  <div class="form-box">
+    <h2>Create a New Activity</h2>
+
+    @if (hasError) {
+    <app-error-msg />
+    }
+
+    <form [formGroup]="form" (ngSubmit)="createCourse()" class="course-form">
+      <div
+        class="input-group"
+        [class.invalid]="
+          form.get('courseTitle')?.invalid && form.get('courseTitle')?.touched
+        "
+        [class.valid]="
+          form.get('courseTitle')?.valid && form.get('courseTitle')?.touched
+        "
+      >
+        <label for="courseTitle">Title:</label>
+        <input
+          type="text"
+          id="courseTitle"
+          placeholder="Enter course title"
+          formControlName="courseTitle"
+        />
+      </div>
+
+      @if(form.get('courseTitle')?.touched) {
+      <div>
+        @if(form.get('courseTitle')?.errors?.['required']) {
+        <div class="error">Title is required!</div>
+        } @if(form.get('courseTitle')?.errors?.['minlength']) {
+        <div class="error">Title must be at least 2 characters!</div>
+        }
+      </div>
+      }
+
+      <div
+        class="input-group"
+        [class.invalid]="
+          form.get('startDate')?.invalid && form.get('startDate')?.touched
+        "
+        [class.valid]="
+          form.get('startDate')?.valid && form.get('startDate')?.touched
+        "
+      >
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" formControlName="startDate" />
+      </div>
+
+      @if(form.get('startDate')?.touched) {
+      <div>
+        @if(form.get('startDate')?.errors?.['required']) {
+        <div class="error">Start date is required!</div>
+        }
+      </div>
+      }
+
+      <div
+        class="input-group"
+        [class.invalid]="
+          form.get('imageUrl')?.invalid && form.get('imageUrl')?.touched
+        "
+        [class.valid]="
+          form.get('imageUrl')?.valid && form.get('imageUrl')?.touched
+        "
+      >
+        <label for="imageUrl">Image URL:</label>
+        <input
+          type="text"
+          id="imageUrl"
+          placeholder="Enter image URL"
+          formControlName="imageUrl"
+        />
+      </div>
+
+      @if(form.get('imageUrl')?.touched) {
+      <div>
+        @if(form.get('imageUrl')?.errors?.['required']) {
+        <div class="error">Image is required!</div>
+        }
+      </div>
+      }
+
+      <div
+        class="input-group"
+        [class.invalid]="
+          form.get('description')?.invalid && form.get('description')?.touched
+        "
+        [class.valid]="
+          form.get('description')?.valid && form.get('description')?.touched
+        "
+      >
+        <label for="description">Description:</label>
+        <textarea
+          id="description"
+          placeholder="Enter course description"
+          formControlName="description"
+        ></textarea>
+      </div>
+
+      @if(form.get('description')?.touched) {
+      <div>
+        @if(form.get('description')?.errors?.['required']) {
+        <div class="error">Description is required!</div>
+        } @if(form.get('description')?.errors?.['minLength']) {
+        <div class="error">
+          Description must be at least 10 characters long!
+        </div>
+        } @if(form.get('description')?.errors?.['maxLength']) {
+        <div class="error">
+          Description must be no longer than 100 characters!
+        </div>
+        }
+      </div>
+      }
+
+      <button
+        class="submit-btn"
+        [disabled]="form.invalid"
+        [style]="{ backgroundColor: form.invalid ? 'grey' : 'goldenrod' }"
+      >
+        Create Activity
+      </button>
+    </form>
+  </div>
+</div>

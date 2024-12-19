@@ -1,0 +1,66 @@
+body {
+  text-decoration: none;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.about-container {
+  text-decoration: none;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+  max-width: 1200px;
+  height: 570px;
+  margin: 170px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  color: rgb(18, 18, 157);
+  margin-bottom: 20px;
+  text-shadow: 3px 2px goldenrod;
+}
+
+.about-container p {
+  color: rgb(18, 18, 157);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  color: rgb(18, 18, 157);
+  margin-bottom: 10px;
+  margin-top: 40px;
+  text-shadow: 3px 2px goldenrod;
+}
+
+.about-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-container ul li {
+  color: rgb(18, 18, 157);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.about-container ul li a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.about-container ul li a:hover {
+  text-decoration: underline;
+}
