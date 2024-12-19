@@ -35,6 +35,6 @@ If everything is normal you will see the following messages:
 If everything is normal you will see the following messages:
 
     Application bundle generation complete.
-    Local:   http://localhost:4200/
+    Local: http://localhost:4200/
 
 Ensure the REST API server is running before starting the SPA to enable proper integration.# SoftUni-Angular-Exam
