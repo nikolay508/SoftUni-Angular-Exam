@@ -26,10 +26,11 @@ If everything is normal you will see the following messages:
 1. Install dependencies for the client (SPA):
 
     Open Terminal, navigate and install:
+   
         - cd project-app
         - npm i (install)
 
-2. Start the Application:
+3. Start the Application:
     - npx(if needed) ng serve
 
 The SPA will be available at http://localhost:4200
