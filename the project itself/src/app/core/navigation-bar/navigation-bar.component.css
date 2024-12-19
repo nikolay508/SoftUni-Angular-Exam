@@ -1,41 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
 
 .nav-wrapper {
-    position:fixed;
-    top: 0;
-    left: 0;
-    text-decoration: none;
-    font-weight: 400;
-    font-style: normal;
-    background-color: white;
-    color: navy;
-    display: flex;
-    width: 100%;
-    height: 80px;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  font-weight: 400;
+  font-style: normal;
+  background-color: white;
+  color: rgb(18, 18, 157);
+  display: flex;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 .nav-btn {
-    border: 1px solid navy;
-    margin-left: 10px;
-    padding: 5px 10px;
+  border: 1px solid rgb(18, 18, 157);
+  margin-left: 10px;
+  padding: 5px 10px;
 }
 
 .nav-btn:hover {
-    border: 1px solid navy;
-    color: rgb(255, 255, 255);
-    background-color: navy;
-    cursor: pointer;
+  border: 1px solid rgb(18, 18, 157);
+  color: rgb(255, 255, 255);
+  background-color: rgb(18, 18, 157);
+  cursor: pointer;
 }
 
-.logo img{
-    height: 70px;
+.logo img {
+  height: 70px;
 }
-.logo{
-    position: fixed;
-    left: 50px;
-    cursor: pointer;
+.logo {
+  position: fixed;
+  left: 50px;
+  cursor: pointer;
 }

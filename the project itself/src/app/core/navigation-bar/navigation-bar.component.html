@@ -1,17 +1,18 @@
 <div class="nav-wrapper">
-    <div class="logo">
-        <img src="logo.png" routerLink="/">
-    </div>
+  <div class="logo">
+    <img src="logo.png" routerLink="/" />
+  </div>
 
-    <div class="nav-btn" routerLink="/">Home</div>
-    <div class="nav-btn" routerLink="/about">About</div>
-    <div class="nav-btn" routerLink="/courses">Courses</div>
-    @if (isLoggedIn) {
-        <div class="nav-btn" routerLink="/create">Create Course</div>
-        <div class="nav-btn" routerLink="/profile">Profile</div>
-    <div class="nav-btn" (click)="logout()">Logout</div>
-    } @else {
-    <div class="nav-btn" routerLink="/login">Login</div>
-    <div class="nav-btn" routerLink="/register">Register</div>
-    }
+  <div class="nav-btn" routerLink="/">Home</div>
+  <div class="nav-btn" routerLink="/about">About</div>
+  <div class="nav-btn" routerLink="/courses">Activities</div>
+  @if (isLoggedIn) {
+    <div class="nav-btn" routerLink="/search">Search Activity</div>
+  <div class="nav-btn" routerLink="/create">Create Activity</div>
+  <div class="nav-btn" routerLink="/profile">Profile</div>
+  <div class="nav-btn" (click)="logout()">Logout</div>
+  } @else {
+  <div class="nav-btn" routerLink="/login">Login</div>
+  <div class="nav-btn" routerLink="/register">Register</div>
+  }
 </div>
