@@ -1,29 +1,72 @@
 import { Routes } from '@angular/router';
-import { SearchComponent } from './shared/search/search.component';
-import { AboutComponent } from './shared/about/about.component';
-import { ErrorComponent } from './shared/error/error.component';
-import { LatestCourseComponent } from './main/home/latest-courses.component';
-import { LoginComponent } from './user/login/login.component';
-import { RegisterComponent } from './user/register/register.component';
-import { CatalogComponent } from './main/catalog/catalog.component';
 import { AuthGuard } from './user/users.guard';
-import { ProfileComponent } from './user/profile/profile.component';
-import { CreateComponent } from './shared/create/create.component';
-import { DetailsComponent } from './shared/details/details.component';
-import { EditComponent } from './shared/edit/edit.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: LatestCourseComponent },
-    { path: 'search', component: SearchComponent },
-    { path: 'courses', component: CatalogComponent },
-    { path: 'courses/:courseId', component: DetailsComponent },
-    { path: 'courses/:courseId/edit', component: EditComponent, canActivate: [AuthGuard] },
-    { path: 'about', component: AboutComponent },
-    { path: 'create', component: CreateComponent, canActivate: [AuthGuard] },
-    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
-    // { path: 'logout', component: LogoutComponent, canActivate: [AuthGuard] },
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: '**', component: ErrorComponent }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./core/home/home.component').then((c) => c.LatestCourseComponent),
+  },
+  {
+    path: 'search',
+    loadComponent: () =>
+      import('./views/search/search.component').then((c) => c.SearchComponent),
+  },
+  {
+    path: 'courses',
+    loadComponent: () =>
+      import('./views/catalog/catalog.component').then(
+        (c) => c.CatalogComponent
+      ),
+  },
+  {
+    path: 'courses/:courseId',
+    loadComponent: () =>
+      import('./views/details/details.component').then(
+        (c) => c.DetailsComponent
+      ),
+  },
+  {
+    path: 'courses/:courseId/edit',
+    loadComponent: () =>
+      import('./views/edit/edit.component').then((c) => c.EditComponent),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'about',
+    loadComponent: () =>
+      import('./views/about/about.component').then((c) => c.AboutComponent),
+  },
+  {
+    path: 'create',
+    loadComponent: () =>
+      import('./views/create/create.component').then((c) => c.CreateComponent),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./user/login/login.component').then((c) => c.LoginComponent),
+  },
+  {
+    path: 'register',
+    loadComponent: () =>
+      import('./user/register/register.component').then(
+        (c) => c.RegisterComponent
+      ),
+  },
+  {
+    path: 'profile',
+    loadComponent: () =>
+      import('./user/profile/profile.component').then(
+        (c) => c.ProfileComponent
+      ),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./views/error/error.component').then((c) => c.ErrorComponent),
+  },
 ];
