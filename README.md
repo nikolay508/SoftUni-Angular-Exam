@@ -26,6 +26,7 @@ If everything is normal you will see the following messages:
 1. Install dependencies for the client (SPA):
 
     Open Terminal, navigate and install:
+   -cd "theproject itelf"
         - cd "the project itself"
         - npm i (install)
 
