@@ -33,6 +33,9 @@ If everything is normal you will see the following messages:
 3. Start the Application:
     - npx(if needed) ng serve
 
-The SPA will be available at http://localhost:4200
+If everything is normal you will see the following messages:
+
+    Application bundle generation complete.
+    Local:   http://localhost:4200/
 
 Ensure the REST API server is running before starting the SPA to enable proper integration.# SoftUni-Angular-Exam
