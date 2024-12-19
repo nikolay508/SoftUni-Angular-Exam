@@ -12,7 +12,7 @@ This guide explains how to start both the server and the client of the project s
     - cd REST-API
     - npm i (install)
 
-2. Start the REST-API server:
+3. Start the REST-API server:
     - npm run dev
 
 If everything is normal you will see the following messages:
@@ -26,9 +26,8 @@ If everything is normal you will see the following messages:
 1. Install dependencies for the client (SPA):
 
     Open Terminal, navigate and install:
-   
-        - cd "the project itself"
-        - npm i (install)
+    - cd "the project itself"
+    - npm i (install)
 
 3. Start the Application:
     - npx(if needed) ng serve
