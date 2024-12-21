@@ -22,10 +22,10 @@ export const appInterceptor: HttpInterceptorFn = (req, next) => {
   return next(req).pipe(
     catchError((err) => {
       if (err.status === 401 && err.error?.message === 'Invalid token!') {
-        //router.navigate(['/home']);
+        router.navigate(['/home']);
       } else {
         errorMsgService.setError(err);
-        // router.navigate(['/error']);
+        router.navigate(['/error']);
       }
 
       throw err;
